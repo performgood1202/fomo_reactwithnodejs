@@ -1,0 +1,123 @@
+.owner-subscribe-page {
+	.owner-subscribe-banner-section{
+		.basic-plan-outer {
+		    padding: 20px 40px;
+		    border-radius: 30px;
+		    position: relative;
+		    .monthly-plan-radio {
+			    display: flex;
+			    justify-content: end;
+			    .monthly-plan-inner {
+				    background: #000491;
+				    padding: 13px;
+				    border-radius: 15px;
+				    max-width: 280px;
+				    width: 100%;
+				    display: flex;
+				    justify-content: space-between;
+				    margin-left: 25px;
+				    [type="radio"] {
+					    zoom: 1.8;
+					}
+					&.orange-back {
+					    background: #f0810f;
+					}
+				}
+			}
+			
+		}
+		.payment_sec{
+		   .basic-form-outer {
+			    margin: 10px 0px;
+			    .outer-form{
+			    	margin:10px 0px;
+			    	.form-label {
+					    color: #A7A7A7;
+					    font-size: 20px;
+					}
+
+					input {
+					    border: none;
+					    border-radius: 3px;
+					    background: #000361;
+					    height: 50px;
+					    color:#fff;
+					    &.errors{
+					    	box-shadow: 0 0 0 0.25rem RGB(255 0 0 / 40%);
+					    }
+					}
+					.StripeElement {
+					    display: block;
+					    margin: 10px 0 20px 0;
+					    max-width: 500px;
+					    padding: 10px 14px;
+					    font-size: 1em;
+					    border: 0;
+					    outline: 0;
+					    border-radius: 4px;
+					    background: #000361;
+					}
+					.master-card-input {
+					    position: relative;
+					    img {
+						    position: absolute;
+						    top: 7px;
+						    right: 7px;
+						}
+						svg {
+						    position: absolute;
+						    right: 10px;
+						    top: 8px;
+						    font-size: 29px;
+						    color: #f0810f;
+						}
+						.StripeElement {
+						    display: block;
+						    margin: 10px 0 20px 0;
+						    max-width: 500px;
+						    padding: 10px 14px;
+						    font-size: 1em;
+						    border: 0;
+						    outline: 0;
+						    border-radius: 4px;
+						    background: #000361;
+						}
+					}
+					.auto_renew {
+						input {
+							    width: 20px;
+							    height: 20px;
+							    margin: 0px 13px;
+						}
+					}
+			    }
+			}
+		}
+		.all-feature {
+		    padding-right: 50px;
+		    li {
+
+		        padding: 9px 4px;
+
+		        .li-feature {
+				    display: flex;
+				    justify-content: space-between;
+				}
+
+		    }
+			
+		}	
+		.modal__wrap {
+			.modal-title {
+				svg {
+				    font-size: 80px;
+				    color: #F0810F;
+				}
+			}
+			h4{
+				font-weight: 400;
+			}
+		}
+
+	}
+}

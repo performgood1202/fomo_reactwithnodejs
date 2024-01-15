@@ -1,0 +1,89 @@
+@import "../../styles/mediaQueries";
+
+.prices-page {
+	.price-section{
+		padding: 0px 0px 100px;
+		position: relative;
+    	z-index: 1;
+		.price-box {
+		    background: #020551;
+		    border-radius: 29px;
+		    padding: 30px 20px;
+		    position:relative;
+		    h3 {
+			    font-size: 28px;
+			    font-weight: bold;
+			    position: relative;
+
+			}
+			h2 {
+			    font-size: 65px;
+			    position: relative;
+			    @include responsive(big-desktop) {
+		          font-size: 55px;
+		        }
+		        @include responsive(tab-land) {
+		          font-size: 40px;
+		        }
+			    span {
+				    font-size: 22px;
+				    display: inline-block;
+				    position: relative;
+				    left: -17px;
+				}
+			}
+			ul {
+			    margin: 0px;
+			    padding: 0px;
+			    list-style: none;
+			    position: relative;
+			    li {
+				    font-size: 22px;
+				    margin-bottom: 11px;
+				    @include responsive(big-desktop) {
+			          font-size: 16px;
+			        }
+				    &.green-icon{
+				    	svg {
+						    fill: #00A74E;
+						}
+				    }
+				    &.red-icon{
+				    	svg {
+						    fill:#D90A0A;
+						}
+				    }
+				}
+			}
+			p{
+				position: relative;
+			}
+			.price-btn {
+			    margin-top: 40px;
+			    position: relative;
+			}
+			&:before{
+				background:url(../../../assets/images/price-mask.png) 0 0 no-repeat;
+		    	content: "";
+			    position: absolute;
+			    background-size: 100%;
+			    width: 250px;
+			    height: 480px;
+			    top: 0;
+			    right: 0;
+			}
+		}
+		.col-lg-4 {
+			margin:20px 0px;
+			padding:0px 25px;
+		    &:first-child{
+		    	padding-left:15px;
+		    }
+		}
+		.price-lightblue{
+			background:#000491;
+		}
+	}
+
+
+}

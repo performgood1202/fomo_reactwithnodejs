@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Invoice</title>
+</head>
+
+<body bgcolor="#f7f7f7">
+<table style="box-sizing:border-box; border:0px solid #c8c8c8;" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="100" colspan="2" align="center"><img src="<%= process.env.UPLOAD_URL %>/uploads/icon.svg" width="100" height="100" />      
+    <hr />
+    </td>
+  </tr>
+  <tr>
+    <td height="31" colspan="2" style="padding-left:10px; font-size:20px; font-family:Verdana, Geneva, sans-serif;"><strong>INVOICE</strong></td>
+  </tr>
+  <tr>
+    <td width="61%" height="28"><table style="box-sizing:border-box; border:0px solid #c8c8c8; margin:10px;" width="90%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td  width="25%" height="25" style="padding-left:10px; font-family:Verdana, Geneva, sans-serif; border-bottom:0px solid #c8c8c8; border-right:0px solid #c8c8c8; font-size:14px;"><strong>Name </strong></td>
+        <td width="75%" style="padding-left:10px; font-family:Verdana, Geneva, sans-serif; border-bottom:0px solid #c8c8c8;  font-size:14px;"><%= invoicedata.customer.fName %> <%= invoicedata.customer.lName %></td>
+      </tr>
+      <tr>
+        <td height="25" style="padding-left:10px; font-family:Verdana, Geneva, sans-serif; border-right:0px solid #c8c8c8; border-top:0px solid #c8c8c8;  font-size:14px;"><strong>Email</strong></td>
+        <td style="padding-left:10px; font-family:Verdana, Geneva, sans-serif; border-top:0px solid #c8c8c8;  font-size:14px;"><%= invoicedata.customer.email %> </td>
+      </tr>
+      <tr>
+        <td height="25" style="padding-left:10px; font-family:Verdana, Geneva, sans-serif; border-right:0px solid #c8c8c8; border-top:0px solid #c8c8c8;  font-size:14px;"><strong>Phone</strong></td>
+        <td style="padding-left:10px; font-family:Verdana, Geneva, sans-serif; border-top:0px solid #c8c8c8;  font-size:14px;">+<%= invoicedata.customer.phone_country_code %> <%= invoicedata.customer.phone %></td>
+      </tr>
+      
+      
+    </table></td>
+    <td width="39%" align="right"><table style="box-sizing:border-box; border:0px solid #c8c8c8; margin:10px;" width="80%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="25" align="right" style="padding-right:10px; font-family:Verdana, Geneva, sans-serif; border-bottom:0px solid #c8c8c8; border-right:0px solid #c8c8c8; font-size:14px;"><strong>Booking ID</strong> : #00<%= invoicedata.booking.booking_id %></td>
+        </tr>
+      <tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="28" colspan="2"> </td>
+  </tr>
+  <% if(invoicedata.orderData.orders) { 
+
+    invoicedata.orderData.orders.forEach(function(orderD){ 
+
+    let order = orderD.order;
+    let orderItems = orderD.orderItems;
+
+    %>
+
+      <tr>
+        <td style="padding:10px;" height="28" colspan="2">
+           Order ID : #<%= order.order_id %>
+           <hr />
+        </td>
+      </tr>
+
+      <tr>
+        <td style="padding:10px;" height="28" colspan="2">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="22%" align="center" style="border-bottom:1px solid #c8c8c8; border-right:1px solid #c8c8c8; border-top:#c8c8c8 1px solid; font-family:Verdana, Geneva, sans-serif; font-size:13px;"><strong>Items </strong></td>
+              <td width="26%" align="center" style="border-bottom:1px solid #c8c8c8; border-right:1px solid #c8c8c8; border-top:#c8c8c8 1px solid; font-family:Verdana, Geneva, sans-serif; font-size:13px;"><strong>Price</strong></td>
+              <td width="20%" align="center" style="border-bottom:1px solid #c8c8c8; border-right:1px solid #c8c8c8; border-top:#c8c8c8 1px solid; font-family:Verdana, Geneva, sans-serif; font-size:13px;"><strong>Qty</strong></td>
+              <td width="19%" align="center" style="border-bottom:1px solid #c8c8c8; border-right:1px solid #c8c8c8; border-top:#c8c8c8 1px solid; font-family:Verdana, Geneva, sans-serif; font-size:13px;"><strong>Amount</strong></td>
+            </tr>
+            <% if(invoicedata.orderData.orders) { 
+
+              orderItems.forEach(function(orderItem){ 
+
+                  let item = orderItem.item;
+                  let menu = orderItem.menu;
+
+            %>
+              <tr>
+                <td style="border-bottom:1px solid #c8c8c8; border-right:1px solid #c8c8c8;" align="center"><%= menu.name %></td>
+                <td style="border-bottom:1px solid #c8c8c8; border-right:1px solid #c8c8c8;" align="center">€<%= item.price %></td>
+                <td style="border-bottom:1px solid #c8c8c8; border-right:1px solid #c8c8c8;" align="center"><%= item.quantity %></td>
+                <td style="border-bottom:1px solid #c8c8c8; border-right:1px solid #c8c8c8;" align="center"><%= item.total_price %></td>
+              </tr>
+            <%  
+              })
+            } %>
+           
+          </table>
+           
+        </td>
+      </tr>
+
+          
+  <%  
+    })
+  } %>
+  
+  <tr>
+    <td style="padding:10px;" height="28"> </td>
+    <td style="padding:10px;" height="28"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td style="border-bottom:1px solid #c8c8c8; border-right:1px solid #c8c8c8; border-top:1px solid #c8c8c8; border-left:1px solid #c8c8c8; font-family:Verdana, Geneva, sans-serif; font-size:13px; padding-left:10px;" width="51%" height="29"><strong>Subtotal</strong></td>
+        <td width="49%" align="center" style="border-bottom:1px solid #c8c8c8; border-right:1px solid #c8c8c8; border-top:1px solid #c8c8c8;">€<%=invoicedata.orderData.order_total_price%></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:1px solid #c8c8c8; border-right:1px solid #c8c8c8; border-left:1px solid #c8c8c8; font-family:Verdana, Geneva, sans-serif; font-size:13px; padding-left:10px;" height="29"><strong>Total</strong></td>
+        <td align="center" style="border-bottom:1px solid #c8c8c8; border-right:1px solid #c8c8c8;">€<%=invoicedata.orderData.order_total_price%></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="28" colspan="2"> </td>
+  </tr>
+  <tr>
+    <td style="font-family:Verdana, Geneva, sans-serif; font-size:13px;" height="28" colspan="2" align="center">
+     
+    </td>
+  </tr>
+  <tr>
+    <td height="28" colspan="2"> </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,151 @@
+@import "../../styles/mediaQueries";
+
+
+.order-page {
+	.orderno {
+	    color: #fff;
+	    display: inline-block;
+	    background: #000491;
+	    margin-right: 10px;
+	    padding: 5px 10px;
+	    line-height: 100%;
+	    border-radius: 5px;
+	    font-size: 16px;
+	    cursor: pointer;
+	    &.active {
+	       background: #F0810F;
+	    }
+	}
+	.menu-name-column {
+		img {
+			width: 50px;
+		    height: 50px;
+		    margin-right: 14px;
+		    border-radius: 50px;
+		    object-fit: cover;
+		}
+	}	
+	.name-items-outer {
+		img {
+		    width: 40px;
+		    height: 40px;
+		    border-radius: 10px;
+		    object-fit: cover;
+		    margin-right:10px;
+		}
+		p {
+		    margin: 0px;
+		    font-size: 18px;
+		}
+	}
+	.price-order{
+		p {
+		    margin: 0px;
+		    font-size: 18px;
+		}
+	}
+	.right-order-list {
+	    background: #020551;
+	    padding: 11px;
+	    border: 2px solid #000491;
+	    border-radius: 8px;
+	    height: 100%;
+	    overflow-y: auto;
+	    height: calc(100vh - 50px);
+	    min-height: 200px;
+	    position: sticky;
+	    top: 5%;
+	    h3{
+	    	font-size:18px; 
+	    }
+	}
+
+	.active-tr {
+	    background: #020551;
+	    border: 2px solid #000491;
+	    border-right: 0px;
+	    position: relative;
+	    &:after {
+		    content: "";
+		    width: 3px;
+		    height: 100%;
+		    position: absolute;
+		    right: -3px;
+		    background: #020551;
+		    z-index: 999;
+		}
+	}
+	.orderTable{
+		.col-lg-8{
+			padding-right: 0;
+			table {
+				span {
+				    font-size: 16px;
+				}
+				&.table{
+					th{
+						background: #05062e;
+						p{
+						  font-weight: 600;
+						}
+					}
+				}
+			}
+		}
+		.col-lg-4{
+			padding-left: 0;
+		}
+	}
+
+}	
+.order-detail-sec{
+	.menu-name-column {
+		img {
+			width: 50px;
+		    height: 50px;
+		    margin-right: 14px;
+		    border-radius: 10px;
+		    object-fit: cover;
+		}
+	}	
+	.right-order-detail-list {
+		.subtotal {
+		    color: #008bc2;
+		}
+		.left-order-items1 {
+		    background: #000491;
+		    padding: 10px 20px;
+		    border-radius: 5px;
+		    margin-left: -20px;
+		    margin-right: -20px;
+		}
+	}
+	.order-subtotal {
+		.col-md-12 {
+		    background: #000491;
+		    padding: 10px 61px 10px 20px;
+		    border-radius: 5px;
+		}
+	}
+	.amount-right {
+	    text-align: right;
+	    margin-left: -41px;
+	}
+	.orderTable{
+		.col-lg-8{
+			table {
+				span {
+				    font-size: 16px;
+				}
+				&.table{
+					th{
+						background: #05062e;
+						p{
+						  font-weight: 600;
+						}
+					}
+				}
+			}
+		}
+	}
+}

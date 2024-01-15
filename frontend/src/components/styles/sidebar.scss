@@ -1,0 +1,84 @@
+.sidebar-main {
+    background: #020551;
+    height: 100vh;
+    padding: 40px 40px;
+    overflow-y: auto;
+    .route-links {
+	    margin-top: 40px;
+	    .links-list {
+		    list-style: none;
+		    padding: 0px;
+		    margin: 0;
+		    li{
+		    	margin-bottom: 10px;
+		    	.a-links {
+				    padding: 12px 10px;
+				    display: inline-block;
+				    width: 100%;
+				    line-height: 100%;
+				    color: #fff;
+				    text-decoration: none;
+				    transition: 0.4s all ease-in-out;
+				    font-size: 22px;
+				    border-radius: 7px;
+				    @include responsive(big-desktop) {
+			          font-size: 18px;
+			        }
+				    &:hover {
+					    background: #000491;
+					}
+				    svg {
+					    margin-right: 10px;
+					}
+				}
+				&.dropdown-link {
+				    padding: 12px 10px;
+				    display: inline-block;
+				    width: 100%;
+				    line-height: 100%;
+				    color: #fff;
+				    text-decoration: none;
+				    transition: 0.4s all ease-in-out;
+				    font-size: 22px;
+				    border-radius: 7px;
+				    position: relative;
+				    cursor:pointer;
+				    @include responsive(big-desktop) {
+			          font-size: 18px;
+			        }
+				    svg {
+					    margin-right: 10px;
+					}
+					&:after {
+					    content: "";
+					    background-image:url(../../assets/images/arrow-icon.png);
+					    position: absolute;
+					    top: 16px;
+					    right: 0;
+					    transition: 0.4s all ease-in-out;
+					    background-size: 100%;
+					    width: 11px;
+					    height: 18px;
+					    background-repeat: no-repeat;
+					}
+					.child-dropdown {
+					    list-style: none;
+					    margin-top: 10px;
+					    li {
+						    margin: 0px;
+						}
+					}
+					
+				}
+				.active{
+					background: #000491;
+				}
+		    }
+		}
+	}
+	.top-logo {
+		img {
+		    max-height: 80px;
+		}
+	}
+}

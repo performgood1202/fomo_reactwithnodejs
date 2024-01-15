@@ -1,0 +1,169 @@
+@import "mediaQueries";
+
+.header {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    padding: 20px 0px;
+    nav {
+        background: transparent !important;
+        .container{
+            display:block;
+            .navbar-nav {
+                justify-content: center;
+                width: 100%;
+                .nav-link{
+                    font-size: 20px;
+                    padding: 0px;
+                    color: #fff;
+                    margin: 0px 25px;
+                    transition: 0.4s all ease-in-out;
+                    &:hover{
+                        color: #0099FF;
+                    }
+                    &.active {
+                        border-bottom: 1px solid #09f;
+                        color: #0099FF;
+                    }
+                    @include responsive(tab-port) {
+                      padding: 10px 25px;
+                    }
+                }
+            }
+            .right-header-location {
+                text-align: right;
+                display: flex;
+                align-items: center;
+                .contact-btn {
+                    width: fit-content;
+                    margin-left: auto;
+                    background: rgb(142,210,255);
+                    background: -moz-linear-gradient(left, rgba(142,210,255,1) 0%, rgba(0,153,255,1) 100%);
+                    background: -webkit-linear-gradient(left, rgba(142,210,255,1) 0%,rgba(0,153,255,1) 100%);
+                    background: linear-gradient(to right, rgba(142,210,255,1) 0%,rgba(0,153,255,1) 70%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ed2ff', endColorstr='#0099ff',GradientType=1 );
+                    font-size: 18px;
+                    padding: 10px 26px;
+                    color: #fff;
+                    font-weight: 400;
+                    transition: 0.4s all ease-in-out;
+                    border-radius: 3px;
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .tab-display-none {
+            @include responsive(tab-port) {
+              display: none;
+            }
+        }
+        .header-mobile {
+            @include responsive(tab-port) {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+        }
+        .navbar-collapse {
+            &.show{
+                @include responsive(tab-port) {
+                    transform: translateX(0%); 
+                }
+            }
+            @include responsive(tab-port) {
+                background: #f0810f;
+                position: fixed;
+                top: 0;
+                left: 0;
+                max-width: 210px;
+                width: 100%;
+                height: 100vh;
+                text-align: center;
+                padding: 40px 10px;
+                transform: translateX(-100%);
+                transition: 0.4s all ease-in-out;
+                min-height: 100vh;
+            }
+        }
+    }
+    .profile-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        img {
+            margin-right: 5px;
+                width: 27px;
+                height: 27px;
+                object-fit: cover;
+                border-radius: 30px;
+        }
+        a {
+            font-size: 13px;
+        }
+        .dropdown-menu{
+            left: auto;
+            right: 0;
+            a {
+                padding: 0px 15px;
+            }
+        }
+    }
+}
+
+.auth-header-main{
+    padding: 15px 0px;
+    .dashboard-profile-view {
+        text-align: right;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        .notification-outer {
+            h3 {
+                font-size: 29px;
+                position: relative;
+                span {
+                    position: absolute;
+                    background: #F0810F;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 30px;
+                    justify-content: center;
+                    display: inline-flex;
+                    align-items: center;
+                    font-size: 14px;
+                    top: -4px;
+                    right: -12px;
+                }
+            }
+        }
+        .profile-header {
+            display: flex;
+            margin-left: 40px;
+            align-items: center;
+            img {
+                width: 66px;
+                height: 66px;
+                border-radius: 60px;
+                object-fit: cover;
+                margin-right: 20px;
+            }
+            .dropdown {
+                a {
+                    font-size: 22px;
+                }
+                .dropdown-menu {
+                    background: #3734A9;
+                    padding: 10px;
+                    border-radius: 10px;
+                    a {
+                        font-size: 19px;
+                        color: #fff;
+                        padding: 0px 6px;
+                        background: transparent;
+                    }
+                }
+            }
+        }
+    }
+}

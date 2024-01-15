@@ -1,0 +1,106 @@
+@import "../../styles/mediaQueries";
+
+.plans-sec{
+	.outer-form{
+		.form-control {
+	        background: #3734A9;
+	    }
+	}
+	form{
+		.search-btn-outer {
+		    position: relative;
+		    max-width: 540px;
+		    input {
+			    background: #000491;
+			    border-radius: 60px;
+			}
+			svg {
+			    position: absolute;
+			    top: 11px;
+			    right: 15px;
+			    font-size: 27px;
+			    color: #F0810F;
+			    transition: 0.4s all ease-in-out;
+			    cursor:pointer;
+			    &:hover{
+			    	color:#fff;
+			    }
+			}
+		}
+	}
+	.search-plan-outer {
+	    display: flex;
+	    justify-content: end;
+	    button {
+		    height: 50px;
+		    padding: 0px 22px;
+		    border-radius: 30px;
+		    margin: 0px 10px;
+		    font-size: 20px;
+		    background: #000491;
+		    border: none;
+		    transition: 0.4s all ease-in-out;
+		    &:hover{
+		    	background: #fff;
+		    	color: #000491;
+		    }
+		    &.active{
+		    	background: #fff;
+		    	color: #000491;
+		    }
+		}
+		.select-arrow {
+		    position: relative;
+		    select {
+			    height: 50px;
+			    padding: 0px 22px;
+			    border-radius: 30px;
+			    margin: 0px 10px;
+			    font-size: 20px;
+			    background: #000491;
+			    border: none;
+			    transition: 0.4s all ease-in-out;
+			    color:#fff;
+			    max-width:210px;
+			    border:none;
+			    box-shadow:none;
+			}
+			svg {
+			    position: absolute;
+			    top: 19px;
+			    right: 7px;
+			}
+		}
+		
+		.dropdown {
+		    height: 50px;
+		    padding: 0px 22px;
+		    border-radius: 30px;
+		    margin: 0px 10px;
+		    font-size: 20px;
+		    background: #000491;
+		    border: none;
+		    transition: 0.4s all ease-in-out;
+		    display: flex;
+		    align-items: center;
+		    .dropdown-menu {
+			    background: #3734A9;
+			    padding: 10px;
+			    border-radius: 10px;
+			    a {
+				    font-size: 19px;
+				    color: #fff;
+				    padding: 0px 6px;
+				    background: transparent;
+				}
+			}
+		}
+	}
+	.delete_sec{
+	   display:flex;
+	   .text-left{
+	      flex : 0 0 90%;
+	   }
+	}
+}
+

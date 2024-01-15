@@ -1,0 +1,112 @@
+@import "../../styles/mediaQueries";
+
+.feature-page {
+	.features-banner-section{
+		padding: 380px 0px 260px 0px;
+		overflow: hidden;
+		@include responsive(big-desktop) {
+          padding: 280px 0px 260px 0px;
+        }
+        @include responsive(tab-land) {
+          padding: 200px 0px 160px 0px;
+        }
+		&:after {
+		    background: url(../../../assets/images/features1.png) 0 0 no-repeat;
+		    content: "";
+		    position: absolute;
+		    background-size: 100%;
+		    width: 50%;
+		    height: 610px;
+		    right: -4%;
+		    top: 50%;
+		    transform: translateY(-50%);
+		    @include responsive(big-desktop) {
+	          height: 450px;
+	          right: -6%;
+	        }
+	        @include responsive(tab-land) {
+                height: 320px;
+    			right: -9%;
+            }
+		}
+	}
+	.features-tabs-section {
+		@include responsive(big-desktop) {
+            padding-bottom: 60px;
+        }
+		.tab-outer {
+		    background: #000491;
+		    border-radius: 20px;
+		    ul {
+			    width: 100%;
+			    background: #8ed2ff;
+			    background: linear-gradient(to right, #8ed2ff 0%, #0099ff 70%);
+			    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ed2ff', endColorstr='#0099ff',GradientType=1 );
+			    border-radius: 10px 10px 0px 0px;
+			    border: none;
+			    overflow: hidden;
+			    li {
+				    flex: 0 0 33.33333%;
+				    button {
+					    width: 100%;
+					    padding: 10px 20px;
+					    font-size: 20px;
+					    font-weight: 600;
+					    padding: 14px 0px;
+					    color: #fff;
+					    transition: 0.4s all ease-in-out;
+					    border-radius: 0px;
+					    border: none;
+					    border-bottom: 2px solid transparent;
+					    border-radius: 10px 10px 0px 0px;
+					    &.active{
+					    	color: #F0810F;
+						    background-color: #1317AF;
+						    border-color: #F0810F;
+					    }
+					    @include responsive(tab-land) {
+				          font-size: 20px;
+				        }
+					}
+				}
+			}
+			.tab-content {
+				.tab-pane {
+				    padding: 40px 50px;
+				    h4 {
+					    font-size: 32px;
+					    margin-bottom: 40px;
+					    @include responsive(tab-land) {
+				          font-size: 25px;
+				        }
+					}
+				}
+			}
+		}
+		&:before {
+		    background: url(../../../assets/images/left-bar.png) 0 0 no-repeat;
+		    content: "";
+		    position: absolute;
+		    background-size: 100%;
+		    width: 600px;
+		    height: 360px;
+		    left: -2%;
+		    top: 0%;
+		}
+		.container {
+		    position: relative;
+		}
+	}
+	.features-fomo-section {
+	    padding: 100px 0px;
+	    @include responsive(big-desktop) {
+          padding: 60px 0px;
+        }
+	}
+	.features-subscribe-section {
+	    background: #F0810F;
+	    padding: 30px 0px;
+	}
+
+
+}

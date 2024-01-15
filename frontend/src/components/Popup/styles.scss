@@ -1,0 +1,100 @@
+/* modal.module.css */
+
+.modal__wrap{
+    .modal {
+        background: #3734A9;
+        border-radius: 15px;
+        max-width: 700px;
+        padding: 2% 3%;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        top: 50%;
+        max-height: 90vh;
+        width: -moz-fit-content;
+        height: fit-content;
+        transform: translateY(-50%);
+        .closeModal {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background: none;
+            border: none;
+            padding: 0px;
+            line-height: 100%;
+            font-size: 30px;
+            transition: 0.4s all ease-in-out;
+            &:hover {
+                color: #F0810F;
+                background: transparent;
+                border: none;
+            }
+            .modal-title {
+                font-size: 36px;
+                padding: 0px 0px 30px 0px;
+            }
+        }
+        .form-modal{
+            .outer-form {
+                margin: 0px 0px 40px;
+                label {
+                    margin-bottom: 0.5rem;
+                    font-size: 22px;
+                    color: #A7A7A7;
+                }
+                input {
+                    border: none;
+                    border-radius: 3px;
+                    background: #000361;
+                    height: 50px;
+                    color: #fff;
+                }
+                
+            }
+            .success-icon {
+                font-size: 49px;
+                color: #42ba96;
+            }
+            .error-icon {
+                font-size: 49px;
+                color: #FF3333;
+            }
+        }
+        .btn-group-modal {
+            margin-bottom: 0;
+            button {
+                margin: 0px 20px;
+            }
+        }
+    }
+}
+
+
+
+.modal__wrap {
+    position: fixed;
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    overflow-x: hidden;
+    background-color: rgba(31, 32, 41, .75);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 200ms 300ms ease;
+}
+
+.visible {
+    pointer-events: auto;
+    opacity: 1;
+    transition: all 200ms ease-in-out;
+}
+
+
+

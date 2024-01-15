@@ -1,0 +1,154 @@
+.login-page {
+    background: url(../../assets/images/login-banner.svg) 0 0 no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    .login-form {
+        background: RGB(0 153 255 / 27%);
+        padding: 40px;
+        border-radius: 10px;
+        max-width: 608px;
+        margin: 0 auto;
+        h6 {
+            color: #fff;
+            font-size: 28px;
+            margin-top: 6px;
+            margin-bottom: 50px;
+        }
+        .form-control {
+            color: #fff;
+            background-color: #0099FF;
+            border: none;
+            height: 50px;
+        }
+        .password-icon {
+            height: 15px;
+            display: block;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 20px;
+            z-index: 111111111;
+        }
+        .btn-primary {
+            color: #fff;
+            background-color: #f0810f;
+            border-color: #f0810f;
+            padding: 9px 20px;
+            height:50px;
+            transition:0.4s all ease-in-out;
+            &:hover{
+               background-color: #05062e;
+                border-color: #05062e; 
+            }
+        }
+        img {
+            max-width: 220px;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 7px;
+            font-size: 20px;
+        }
+        .forgot-pass {
+            a {
+                display: inline-block;
+                margin-top: 6px;
+                text-decoration: none;
+                font-size: 16px;
+            }
+        }
+        .password-eye {
+            position: relative;
+            span {
+                position: absolute;
+                top: 8px;
+                right: 10px;
+                font-size: 19px;
+                cursor:pointer;
+                color: #000;
+            }
+        }
+    }
+}
+.forgot-pass-page{
+
+    background: url(../../assets/images/login-banner.svg) 0 0 no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    .password-form {
+        background: RGB(0 153 255 / 27%);
+        padding: 40px;
+        border-radius: 10px;
+        max-width: 608px;
+        margin: 0 auto;
+        h6 {
+            color: #fff;
+            font-size: 28px;
+            margin-top: 6px;
+            margin-bottom: 50px;
+        }
+        .form-control {
+            color: #fff;
+            background-color: #0099FF;
+            border: none;
+            height: 50px;
+        }
+        .password-icon {
+            height: 15px;
+            display: block;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 20px;
+            z-index: 111111111;
+        }
+        .btn-primary {
+            color: #fff;
+            background-color: #f0810f;
+            border-color: #f0810f;
+            padding: 9px 20px;
+            height:50px;
+            transition:0.4s all ease-in-out;
+            &:hover{
+               background-color: #05062e;
+                border-color: #05062e; 
+            }
+        }
+        img {
+            max-width: 220px;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 7px;
+            font-size: 20px;
+        }
+        .forgot-pass {
+            a {
+                display: inline-block;
+                margin-top: 6px;
+                text-decoration: none;
+                font-size: 16px;
+            }
+        }
+        .password-eye {
+            position: relative;
+            span {
+                position: absolute;
+                top: 8px;
+                right: 10px;
+                font-size: 19px;
+                cursor:pointer;
+                color: #000;
+            }
+        }
+    }
+
+}

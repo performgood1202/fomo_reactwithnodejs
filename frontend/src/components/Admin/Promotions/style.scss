@@ -1,0 +1,86 @@
+@import "../../styles/mediaQueries";
+
+.promotion-main-sec{
+	.icons-dash-back {
+	    padding: 20px;
+	    border-radius: 13px;
+	    background: #020551;
+	    position: relative;
+	    @include responsive(big-desktop) {
+          padding: 10px;
+        }
+	    .right-content-outer {
+		    padding-left: 20px;
+		    @include responsive(big-desktop) {
+	          padding-left: 10px;
+	        }
+	        h4 {
+			    line-height: 100%;
+			    margin: 0px;
+			}
+			p {
+			    margin: 0px;
+			}
+		}
+		.icons-back {
+		    width: 76px;
+		    height: 76px;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    border-radius: 10px;
+		    @include responsive(big-desktop) {
+	          width: 56px;
+    		  height: 56px;
+    		  padding: 11px;
+	        }
+		}
+		.plus-outer {
+		    position: absolute;
+		    right: 10px;
+		    top: 10px;
+		    svg {
+			    font-size: 32px;
+			    color: #f0810f;
+			}
+		}
+	}
+	
+	
+}
+.admin-promotions-sec2{
+    .ads-live-main {
+	    .col {
+		    max-width: 20%;
+		}
+	    .ads-live {
+	       color: #fff;
+		   .icon {
+			    background: #05062e;
+			    padding: 6px;
+			    display: inline-flex;
+			    font-size: 22px;
+			    border-radius: 5px;
+			}
+			.title {
+			    font-size: 24px;
+			    font-weight: 600;
+			    margin: 10px 0px 5px;
+			}
+			.time {
+			    font-size: 20px;
+			}
+		}
+	}
+}
+   
+.promotion-setting-sec{
+	.setting_main {
+		svg {
+		    font-size: 30px;
+		    margin-top: 46px;
+		    color: #f0810f;
+		    cursor:pointer;
+		}
+	}
+}

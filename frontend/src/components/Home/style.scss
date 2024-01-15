@@ -1,0 +1,174 @@
+@import "../styles/mediaQueries";
+
+.home-page {
+	
+	.counter-section {
+	    padding: 115px 0px;
+	}
+	.home-sec-3 {
+	    position: relative;
+	    &:before{
+	    	background:url(../../assets/images/left-bar.png) 0 0 no-repeat;
+	    	content: "";
+		    position: absolute;
+		    background-size: 100%;
+		    width: 600px;
+		    height: 360px;
+		    left: -2%;
+		    top: 0%;
+		    @include responsive(tab-port) {
+                display:none;
+            }
+	    }
+	    .container {
+		    position: relative;
+		    .one-pace-img {
+			    @include responsive(tab-port) {
+		            margin: 20px 0px;
+		        }
+			}
+		}
+	}
+	.home-sec-4 {
+		position: relative;
+	    padding: 100px 0px 0px;
+	    overflow: hidden;
+	    .how-work-sec {
+		    margin: 170px 0px;
+		    background: RGB(0 4 145 / 82%);
+		    padding: 50px;
+		    border-radius: 30px;
+		    .step-outer {
+		    	img {
+				    width: 65px;
+				    margin-right: 10px;
+				}
+				h5{
+					display: flex;
+				}
+		    }
+		    @include responsive(tab-port) {
+	            margin: 60px 0px;
+	        }
+		}
+		&:before{
+	    	background:url(../../assets/images/right-bar.png) 0 0 no-repeat;
+	    	content: "";
+		    position: absolute;
+		    background-size: 100%;
+		    width: 1010px;
+		    height: 950px;
+		    right: -9%;
+		    bottom: 20%;
+		    @include responsive(big-desktop) {
+	          width: 570px;
+			  height: 580px;
+	        }
+	        @include responsive(tab-land) {
+	          width: 420px;
+	        }
+	        @include responsive(tab-port) {
+	            display:none;
+	        }
+	    }
+	    .one-pace-img {
+		    position: relative;
+		    @include responsive(tab-port) {
+	            margin: 20px 0px;
+	        }
+		}
+		.row-reverse {
+		    @include responsive(tab-port) {
+	            flex-direction: column-reverse;
+	        }
+		}
+	}
+	.price-section{
+		padding: 0px 0px 100px;
+		position: relative;
+    	z-index: 1;
+		.price-box {
+		    background: #020551;
+		    border-radius: 29px;
+		    padding: 30px 20px;
+		    position:relative;
+		    h3 {
+			    font-size: 28px;
+			    font-weight: bold;
+			    position: relative;
+
+			}
+			h2 {
+			    font-size: 65px;
+			    position: relative;
+			    @include responsive(big-desktop) {
+		          font-size: 55px;
+		        }
+		        @include responsive(tab-land) {
+		          font-size: 40px;
+		        }
+			    span {
+				    font-size: 22px;
+				    display: inline-block;
+				    position: relative;
+				    left: -17px;
+				}
+			}
+			ul {
+			    margin: 0px;
+			    padding: 0px;
+			    list-style: none;
+			    position: relative;
+			    li {
+				    font-size: 22px;
+				    margin-bottom: 11px;
+				    @include responsive(big-desktop) {
+			          font-size: 16px;
+			        }
+				    &.green-icon{
+				    	svg {
+						    fill: #00A74E;
+						}
+				    }
+				    &.red-icon{
+				    	svg {
+						    fill:#D90A0A;
+						}
+				    }
+				}
+			}
+			p{
+				position: relative;
+			}
+			.price-btn {
+			    margin-top: 40px;
+			    position: relative;
+			}
+			&:before{
+				background:url(../../assets/images/price-mask.png) 0 0 no-repeat;
+		    	content: "";
+			    position: absolute;
+			    background-size: 100%;
+			    width: 250px;
+			    height: 480px;
+			    top: 0;
+			    right: 0;
+			}
+		}
+		.col-lg-4 {
+		    padding-left: 50px;
+		    &:first-child{
+		    	padding-left:15px;
+		    }
+		    @include responsive(tab-port) {
+	            padding-left: 15px;
+    			margin-bottom: 30px;
+	        }
+		}
+		.price-lightblue{
+			background:#000491;
+		}
+	}
+
+
+}

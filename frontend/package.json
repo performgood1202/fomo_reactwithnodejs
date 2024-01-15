@@ -1,0 +1,73 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@amcharts/amcharts5": "^5.2.15",
+    "@stripe/react-stripe-js": "^1.10.0",
+    "@stripe/stripe-js": "^1.34.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "babel-loader": "^8.2.5",
+    "bootstrap": "^5.2.0",
+    "chart.js": "^3.9.1",
+    "cross-env": "^7.0.3",
+    "crypto": "^1.0.1",
+    "css-loader": "^6.7.1",
+    "history": "^5.3.0",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.37",
+    "node-sass": "^7.0.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.4.0",
+    "react-chartjs-2": "^4.3.1",
+    "react-data-table-component": "^7.5.2",
+    "react-datepicker": "^4.8.0",
+    "react-dom": "^18.2.0",
+    "react-drag-drop-files": "^2.3.7",
+    "react-google-places-autocomplete": "^3.4.0",
+    "react-icons": "^4.4.0",
+    "react-phone-input-2": "^2.15.1",
+    "react-redux": "^8.0.2",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
+    "react-router-redux": "^4.0.8",
+    "react-scripts": "5.0.1",
+    "reactstrap": "^9.1.2",
+    "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-logger": "^3.0.6",
+    "sass-loader": "^13.0.2",
+    "socket.io-client": "^4.5.2",
+    "style-loader": "^3.3.1",
+    "styled-components": "^5.3.5",
+    "superagent": "^8.0.0",
+    "superagent-promise": "^1.1.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "cross-env PORT=3001 react-scripts start",
+    "build": "react-scripts build",
+    "test": "cross-env PORT=3001 react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+footer{
+    position:relative;
+    border-top: 2px solid #08A8FF;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    @include responsive(tab-port) {
+        text-align:center;
+    }
+    .links{
+        text-align:center;
+        @include responsive(tab-port) {
+            margin: 30px 0px;
+        }
+        a {
+            font-size: 20px;
+            padding: 0px 25px;
+            color: #fff;
+            transition: 0.4s all ease-in-out;
+            text-decoration: none;
+            &:hover{
+                color: #0099FF;
+            }
+            @include responsive(tab-land) {
+                font-size: 18px;
+                padding: 0px 15px;
+            }
+            @include responsive(phone-land) {
+                font-size: 16px;
+                padding: 0px 10px;
+            }
+        }
+    }
+    .icons {
+        text-align: right;
+        @include responsive(tab-port) {
+            text-align:center;
+        }
+        a {
+            color: #0099FF;
+            font-size: 26px;
+            display: inline-block;
+            margin-left: 20px;
+            transition: 0.4s all ease-in-out;
+            &:hover{
+                color: #fff;
+            }
+        }
+    }
+    &:before{
+        background:url(../../assets/images/footer-bar.png) 0 0 no-repeat;
+        content: "";
+        position: absolute;
+        background-size: 100%;
+        width: 1360px;
+        height: 660px;
+        bottom: 0;
+        left: -10%;
+        @include responsive(big-desktop) {
+            height: 530px;
+            width: 1050px;
+        }
+        @include responsive(tab-port) {
+            display:none;
+        }
+    }
+    .copyright-txt {
+        color: #B1B1B1;
+        font-size: 14px;
+        margin-top: 25px;
+        margin-bottom: 0px;
+    }
+    .container {
+        position: relative;
+    }
+
+}
